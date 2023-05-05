@@ -14,7 +14,7 @@ public class EnderecoDTO {
     private String cep;
     private String cidade;
     private String uf;
-    private String coplemento;
+    private String complemento;
     private String numero;
 
 }
