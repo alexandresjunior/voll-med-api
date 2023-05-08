@@ -10,6 +10,7 @@ import med.voll.api.constants.Especialidade;
 @AllArgsConstructor
 public class MedicoListagemDTO {
 
+    private Long id;
     private String nome;
     private String email;
     private String crm;

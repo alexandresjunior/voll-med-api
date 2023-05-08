@@ -40,6 +40,7 @@ public class Medico {
     public MedicoListagemDTO toListagemDTO() {
         MedicoListagemDTO dto = new MedicoListagemDTO();
 
+        dto.setId(this.id);
         dto.setNome(this.nome);
         dto.setEmail(this.email);
         dto.setCrm(this.crm);
