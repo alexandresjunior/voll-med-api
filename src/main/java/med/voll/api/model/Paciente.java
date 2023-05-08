@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import med.voll.api.dto.PacienteListagemDTO;
 
 @Data
 @NoArgsConstructor
@@ -29,5 +30,16 @@ public class Paciente {
 
     @Embedded
     private Endereco endereco;
+
+    public PacienteListagemDTO toListagemDTO() {
+        PacienteListagemDTO dto = new PacienteListagemDTO();
+
+        dto.setId(this.id);
+        dto.setNome(this.nome);
+        dto.setEmail(this.email);
+        dto.setCpf(this.cpf);
+
+        return dto;
+    }
 
 }
