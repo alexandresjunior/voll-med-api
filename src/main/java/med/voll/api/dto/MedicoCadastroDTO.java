@@ -14,7 +14,7 @@ import med.voll.api.model.Medico;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MedicoDTO {
+public class MedicoCadastroDTO {
 
     @NotBlank
     private String nome;
