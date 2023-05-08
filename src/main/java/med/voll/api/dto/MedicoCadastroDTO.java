@@ -47,6 +47,7 @@ public class MedicoCadastroDTO {
         medico.setCrm(this.crm);
         medico.setEndereco(this.endereco.toModel());
         medico.setEspecialidade(this.especialidade);
+        medico.setAtivo(true);
 
         return medico;
     }

@@ -53,7 +53,11 @@ public class MedicoController {
     @DeleteMapping("/{id}")
     @Transactional
     public void excluirMedico(@PathVariable("id") Long id) {
-        medicoRepository.deleteById(id);
+        Optional<Medico> medico = medicoRepository.findById(id);
+
+        if (medico.isPresent()) {
+            medico.get().setAtivo(false);
+        }
     }
 
     @Autowired

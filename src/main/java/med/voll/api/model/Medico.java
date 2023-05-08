@@ -40,6 +40,8 @@ public class Medico {
     @Embedded
     private Endereco endereco;
 
+    private Boolean ativo;
+
     public MedicoListagemDTO toListagemDTO() {
         MedicoListagemDTO dto = new MedicoListagemDTO();
 
