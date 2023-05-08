@@ -3,6 +3,8 @@ package med.voll.api.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,7 +28,8 @@ public class MedicoController {
     }
 
     @GetMapping
-    public Page<MedicoListagemDTO> listarMedicos(Pageable paginacao) {
+    public Page<MedicoListagemDTO> listarMedicos(
+            @PageableDefault(size = 10, page = 0, sort = { "nome" }, direction = Direction.ASC) Pageable paginacao) {
         return medicoRepository.findAll(paginacao).map(medico -> medico.toListagemDTO());
     }
 
