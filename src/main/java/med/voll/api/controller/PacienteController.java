@@ -8,7 +8,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -45,6 +47,16 @@ public class PacienteController {
 
         if (paciente.isPresent()) {
             paciente.get().updateModelFromDTO(pacienteDTO);
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void excluirPaciente(@PathVariable("id") Long id) {
+        Optional<Paciente> paciente = pacienteRepository.findById(id);
+
+        if (paciente.isPresent()) {
+            paciente.get().setAtivo(false);
         }
     }
 

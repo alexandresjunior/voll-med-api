@@ -42,6 +42,7 @@ public class PacienteCadastroDTO {
         paciente.setTelefone(this.telefone);
         paciente.setCpf(this.cpf);
         paciente.setEndereco(this.endereco.toModel());
+        paciente.setAtivo(true);
 
         return paciente;
     }
