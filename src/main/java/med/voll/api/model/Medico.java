@@ -15,8 +15,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import med.voll.api.constants.Especialidade;
-import med.voll.api.dto.MedicoAtualizacaoDTO;
-import med.voll.api.dto.MedicoListagemDTO;
+import med.voll.api.dto.medico.MedicoAtualizacaoDTO;
+import med.voll.api.dto.medico.MedicoListagemDTO;
 
 @Data
 @NoArgsConstructor

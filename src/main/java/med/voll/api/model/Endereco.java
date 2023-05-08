@@ -6,7 +6,7 @@ import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import med.voll.api.dto.EnderecoDTO;
+import med.voll.api.dto.endereco.EnderecoDTO;
 
 @Data
 @NoArgsConstructor

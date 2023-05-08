@@ -1,4 +1,4 @@
-package med.voll.api.dto;
+package med.voll.api.dto.medico;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

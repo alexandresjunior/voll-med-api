@@ -1,4 +1,4 @@
-package med.voll.api.dto;
+package med.voll.api.dto.paciente;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,11 +7,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PacienteAtualizacaoDTO {
+public class PacienteListagemDTO {
 
     private Long id;
     private String nome;
-    private String telefone;
-    private EnderecoDTO endereco;
+    private String email;
+    private String cpf;
 
 }

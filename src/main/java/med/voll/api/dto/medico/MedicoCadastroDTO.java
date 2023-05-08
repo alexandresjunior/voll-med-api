@@ -1,4 +1,4 @@
-package med.voll.api.dto;
+package med.voll.api.dto.medico;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import med.voll.api.constants.Especialidade;
+import med.voll.api.dto.endereco.EnderecoDTO;
 import med.voll.api.model.Medico;
 
 @Data
