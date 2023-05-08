@@ -24,9 +24,13 @@ public class MedicoDTO {
     private String email;
 
     @NotBlank
+    @Pattern(regexp = "\\d{2}-\\d{4,5}-\\d{4}")
+    private String telefone;
+
+    @NotBlank
     @Pattern(regexp = "\\d{4,6}")
     private String crm;
-    
+
     @NotNull
     private Especialidade especialidade;
 
@@ -39,6 +43,7 @@ public class MedicoDTO {
 
         medico.setNome(this.nome);
         medico.setEmail(this.email);
+        medico.setTelefone(this.telefone);
         medico.setCrm(this.crm);
         medico.setEndereco(this.endereco.toModel());
         medico.setEspecialidade(this.especialidade);
