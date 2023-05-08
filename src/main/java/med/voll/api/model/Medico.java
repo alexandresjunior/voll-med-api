@@ -13,6 +13,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import med.voll.api.constants.Especialidade;
+import med.voll.api.dto.MedicoListagemDTO;
 
 @Data
 @NoArgsConstructor
@@ -35,5 +36,16 @@ public class Medico {
 
     @Embedded
     private Endereco endereco;
+
+    public MedicoListagemDTO toListagemDTO() {
+        MedicoListagemDTO dto = new MedicoListagemDTO();
+
+        dto.setNome(this.nome);
+        dto.setEmail(this.email);
+        dto.setCrm(this.crm);
+        dto.setEspecialidade(this.especialidade);
+
+        return dto;
+    }
 
 }
